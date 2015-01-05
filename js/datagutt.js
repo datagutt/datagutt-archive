@@ -9,6 +9,7 @@ window.datagutt = {
         self.pizza();
         clickCount = 0;
       }
+      clickCount++;
     };
     if(avatar && avatar.className){
       avatar.style.visibility = 'visible';
