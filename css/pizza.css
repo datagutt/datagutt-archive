@@ -5,7 +5,9 @@ html.pizza {
     color: red;
 }
 .pizza .home-background-overlay {
-    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .pizza #home-background {
     background: #000 url('../img/flames.gif') no-repeat bottom center;
