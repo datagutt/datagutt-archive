@@ -25,7 +25,7 @@ window.datagutt = {
       if(doc){
         doc.className += ' pizza';
         for(var i = 0; i < 50; i++){
-          homeBackgroundOverlay.innerHTML += '<marquee><img src="./img/lama.gif"></marquee>';
+          homeBackgroundOverlay.innerHTML += '<marquee><img src="./img/colorful-3.gif"></marquee>';
         }
       }
   }
