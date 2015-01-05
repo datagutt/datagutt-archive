@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="wf-loading">
+<head>
+<title>datagutt</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" />
+<link href="./css/animate.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+/* Prevent FOUC */
+.wf-loading  *{
+  opacity: 0;
+}
+.wf-active *, 
+.wf-inactive * {
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+  transition: 250ms;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+html {
+	font: 21px/30px 'Open Sans Condensed', sans-serif;
+	color: #8598ad;
+  background: #212931;
+  text-shadow: 0 1px 1px rgba(0,0,0,.25);
+	-webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+	width: 100%;
+
+	overflow: hidden-x;
+
+	/* Centering in The Unknown */
+	text-align: center;
+}
+canvas {
+	display: block;
+	vertical-align: bottom;
+	opacity: 0.6;
+}
+#home-background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: -9999;
+}
+#wrap {	
+	height: 100%;
+  width: 100%;
+  position: absolute;
+	display: table;
+	text-align: center;
+}
+#wrap #middle {
+	max-width: 38rem;
+	margin: 0 auto;	
+  padding: 1.875rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+.content {
+  display: inline-block;
+  max-width: 38rem;
+  padding: 1.875rem;
+}
+.avatar {
+  visibility: hidden;
+
+}
+.avatar img {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 80%;
+  width: 150px;
+  text-align: center;
+}
+h1 {
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+    color: #eee;
+}
+ul li{
+}
+.animated, .wf-active, .avatar {
+}
+</style>
+<script type="text/javascript" src="http://cdn.polyfill.io/v1/polyfill.js?features=default"></script>
+<script type="text/javascript" src="./js/animate.css.min.js"></script>
+<script type="text/javascript">
+datagutt = {
+  init: function(){
+    var doc = document.documentElement;
+    var avatar = document.getElementsByClassName('avatar')[0];
+    if(avatar && avatar.className){
+      avatar.style.visibility = 'visible';
+      avatar.animate('bounceIn');
+    }
+  }
+}
+</script>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans+Condensed:300:latin' ] },
+    active: function() {
+      var wfActive = document.getElementsByClassName('wf-active')[0];
+      wfActive.animate('fadeIn', function(){
+        if(datagutt && datagutt.init){
+          datagutt.init();
+        }
+      });
+    },
+    inactive: function() {},
+
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+<div id="home-background"></div>
+<div id="home-background-overlay"></div>
+<div id="wrap">
+	<div id="middle">
+    <div class="content">
+  		<div class="avatar"><img src="./img/avatar.png"></div>
+  		<p>Hi, i'm <span class="name">Thomas Lekanger</span>.</p>
+      <p>18 year old web developer from Askim in Norway.</p>
+      <p>You can find me on <a href="http://twitter.com/datagutt">Twitter</a>, <a href="http://github.com/datagutt">Github</a> and <a href="https://plus.google.com/+ThomasLekanger/posts">Google+</a>.</p>
+    </p>
+	</div>
+</div>
+</body>
+</html>
