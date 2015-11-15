@@ -2,25 +2,25 @@
 <html class="wf-loading">
 <head>
 <title>datagutt</title>
+<meta charset="utf-8" />
 <meta name="viewport" content="width=450, maximum-scale=1"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" />
-<link href="./css/animate.css" rel="stylesheet" type="text/css">
+<link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.4/basscss.min.css" rel="stylesheet">
+<link href="./css/polyfill.object-fit.css" rel="stylesheet" type="text/css">
 <link href="./css/datagutt.css" rel="stylesheet" type="text/css">
-<link href="./css/pizza.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="http://cdn.polyfill.io/v1/polyfill.js?features=default"></script>
-<script type="text/javascript" src="./js/animate.css.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/sjhewitt/glitch.js/master/glitch.js"></script>
+<script type="text/javascript" src="./js/html2canvas.js"></script>
+<script type="text/javascript" src="./js/glitchy.js"></script>
 <script type="text/javascript" src="./js/cheet.min.js"></script>
 <script type="text/javascript" src="./js/datagutt.js"></script>
 <script type="text/javascript">
   WebFontConfig = {
-    google: { families: [ 'Open+Sans+Condensed:300:latin' ] },
+    google: { families: [ 'Source+Sans+Pro:400,300:latin' ] },
     active: function() {
       var wfActive = document.getElementsByClassName('wf-active')[0];
-      wfActive.animate('fadeIn', function(){
         if(datagutt && datagutt.init){
           datagutt.init();
         }
-      });
     },
     inactive: function() {},
 
@@ -28,27 +28,42 @@
   (function() {
     var wf = document.createElement('script');
     wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
     wf.type = 'text/javascript';
     wf.async = 'true';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })(); </script>
-<script type="text/javascript">
-</script>
 </head>
 <body>
-<div id="home-background"></div>
+<div id="home-background"><img src="./img/bg1.jpg" class="bg1" style="width: 100%;"></div>
 <div id="home-background-overlay"></div>
-<div id="wrap">
-	<div id="middle">
-    <div class="content">
-  		<div class="avatar"><img src="./img/avatar.png"></div>
-  		<p>Hi, I'm <span class="name">Thomas Lekanger</span>.</p>
-      <p>18 year old web developer from Askim in Norway.</p>
-      <p>You can find me on <a href="http://twitter.com/datagutt">Twitter</a>, <a href="http://github.com/datagutt">Github</a> and <a href="https://plus.google.com/+ThomasLekanger/posts">Google+</a>.</p>
-    </p>
+<div class="container clearfix table  p2" style="min-height:128px">
+	<div class="p2 table-cell mx-auto">
+      <div class="avatar">
+        <img src="./img/avatar.png">
+      </div>
+      <div class="info">
+    		<h1 class="m0">Hi, I'm <span class="name">Thomas Lekanger</span>.</h2>
+        <h2 class="m0">18 year old web developer from Askim in Norway.</h2>
+      </div>
+      <div class="menu">
+        <h3>Find me on:</h3>
+        <div class="buttons">
+          <a href="http://twitter.com/datagutt" class="btn btn-outline mb1">Twitter</a>
+          <a href="http://github.com/datagutt" class="btn btn-outline mb1">Github</a>
+          <a href="https://plus.google.com/+ThomasLekanger/posts" class="btn btn-outline mb1">Google+</a>
+        </div>
+      </div>
 	</div>
 </div>
+<script type="text/javascript" src="./js/polyfill.object-fit.min.js"></script>
+<script>
+    objectFit.polyfill({
+        selector: 'img', // this can be any CSS selector
+        fittype: 'cover', // either contain, cover, fill or none
+        disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
+    });
+</script>
 </body>
 </html>
